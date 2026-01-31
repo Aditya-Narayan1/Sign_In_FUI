@@ -1,0 +1,171 @@
+
+
+:root {
+  --h2r-green: #00ff88;
+  --h2r-green-dark: #00c96f;
+  --carbon-black: #050505;
+  --deep-black: #000000;
+  --gunmetal: #0d0d0d;
+  --steel-border: #1f1f1f;
+  --text-muted: #9a9a9a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #0b1a14, #000000 70%);
+  color: #eaeaea;
+}
+
+/* ===== Layout ===== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ===== Card: Carbon-Fiber Garage ===== */
+.auth-card {
+  background:
+    linear-gradient(145deg, #040404, #0b0b0b),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02) 2px,
+      transparent 2px,
+      transparent 6px
+    );
+  padding: 2.4rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--steel-border);
+  box-shadow:
+    0 0 30px rgba(0, 255, 136, 0.15),
+    0 15px 45px rgba(0, 0, 0, 0.95);
+  position: relative;
+}
+
+/* Green accent line */
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--h2r-green),
+    transparent
+  );
+}
+
+/* ===== Heading ===== */
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: var(--h2r-green);
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* ===== Input Groups ===== */
+.input-group {
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Inputs: Stealth Black */
+.input-group input {
+  margin-top: 0.45rem;
+  padding: 0.7rem 0.75rem;
+  background: var(--gunmetal);
+  border: 1px solid var(--steel-border);
+  border-radius: 6px;
+  color: #f0f0f0;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-group input::placeholder {
+  color: #666;
+}
+
+.input-group input:focus {
+  border-color: var(--h2r-green);
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 136, 0.8),
+    0 0 12px rgba(0, 255, 136, 0.6);
+  background: #0f0f0f;
+}
+
+/* ===== Button: H2R Throttle ===== */
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.6rem;
+  background: linear-gradient(
+    135deg,
+    var(--h2r-green),
+    var(--h2r-green-dark)
+  );
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+  box-shadow:
+    0 0 20px rgba(0, 255, 136, 0.9),
+    0 0 40px rgba(0, 255, 136, 0.4);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 0 10px rgba(0, 255, 136, 0.6);
+}
+
+/* ===== Toggle Text ===== */
+.toggle-text {
+  margin-top: 1.6rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.toggle-text span {
+  margin-left: 6px;
+  color: var(--h2r-green);
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.toggle-text span:hover {
+  text-shadow:
+    0 0 6px rgba(0, 255, 136, 0.9);
+}
